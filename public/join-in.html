@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+  Last Updated On: December 11, 2021
+  Name: Travis Xie
+  Section: AE, TA: Tim Mandzyuk,Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the join-in HTML page for the FP. In this page, user can input their personal information
+  to be a membership of Husky Hotel.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="join-in.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="join-in.js"></script>
+    <title>Join Us</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Join Husky Honors</h1>
+    <section>
+      <p>Join us to get these benefits: </p>
+      <ul>
+        <li>✅Free WiFi</li>
+        <li>✅Digital check-in</li>
+      </ul>
+    </section>
+
+    <form id="sign-up">
+      <div class="input-group">
+        <input id="username" name="username" type="text" required  minlength="5" maxlength="20" autocomplete="on">
+        <label for="username" >Username</label>
+      </div>
+      <div class="input-group">
+        <input id="first-name" name="first-name" type="text" placeholder="" autocomplete="on">
+        <label for="first-name">First name</label>
+      </div>
+      <div class="input-group">
+        <input id="last-name" name="last-name" type="text" placeholder="" autocomplete="on">
+        <label for="last-name">Last name</label>
+      </div>
+      <div class="input-group">
+        <input id="phone" name="phone" type="tel" placeholder="" autocomplete="on">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="input-group">
+        <input id="email" name="email" type="email" required autocomplete="on">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-group">
+        <input id="address" name="address" type="address" placeholder="" autocomplete="on">
+        <label for="address">Address</label>
+      </div>
+      <div class="input-group">
+        <input id="address2" name="address2" type="address" placeholder="" autocomplete="on">
+        <label for="address2">Address 2</label>
+      </div>
+      <div class="input-group">
+        <input id="zipcode" name="zipcode" type="text" placeholder="" autocomplete="on">
+        <label for="zipcode">Zip</label>
+      </div>
+      <div class="input-group special">
+        <input id="password" name="password" type="password" required  autocomplete="on" minlength="8" maxlength="32">
+        <label for="password">Password</label>
+      </div>
+      <div>
+        <ul id="password-requirement">
+          <li>Must be between 8 and 32 characters</li>
+          <li>Contain at least one lowercase letter</li>
+          <li>Contain at least one uppercase letter</li>
+          <li>Contain at least one number (0-9)</li>
+        </ul>
+      </div>
+      <div class="input-group">
+        <input id="confirm" name="confirm" type="password" placeholder="password" required  autocomplete="on" minlength="8" maxlength="32">
+        <label for="confirm">Confirm</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox" required>
+        <label for="checkbox">I accept the terms and conditions</label>
+      </div>
+      <div id="alert" class="hidden alert">
+        <p></p>
+      </div>
+      <div>
+        <button type="submit">Join for free</button>
+      </div>
+    </form>
+
+    <section id="go-back" class="hidden">
+      <h1>Created account successfully.</h1>
+      <div>
+        <p>
+          Return to the home page in <span id="countdown"></span> seconds. Or
+          <span id="return">return</span> now.
+        </p>
+      </div>
+    </section>
+
+    <hr>
+
+    <footer>
+      <div>
+        <p id="policy">Hotel Policy</p>
+      </div>
+      <div id="img">
+        <img src="image/parking.png" alt="car">
+        <img src="image/pets.png" alt="dog">
+        <img src="image/somking.png" alt="no smoking">
+        <img src="image/WiFi.png" alt="WiFi">
+      </div>
+      <div id="container">
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon-Thurs: 9:00am - 9:00pm</p>
+          <p>Fri-Sat: 9:00am - 11:00pm</p>
+          <p>Sunday: 9:00am - 1:00am</p>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p></p>
+          <p>Phone: (206)7789065</p>
+          <p>Email: huskyHotel@uw.edu</p>
+          <p>Address: University of Washington</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

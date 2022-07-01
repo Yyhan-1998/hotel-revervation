@@ -1,0 +1,101 @@
+/*
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the style sheet for the join-in.html. It uses the UW purple and gold theme.
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, .input-group > label {
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+section, section > ul, form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  margin-top: 10px;
+}
+
+section > ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+section > ul > li {
+  margin-left: 10px;
+}
+
+/* register form */
+form > div {
+  width: 80%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.input-group, .input-group > input {
+  position: relative;
+}
+
+.input-group > label, .input-group > input {
+  height: 40px;
+}
+
+.input-group > label {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  margin-left: 5px;
+}
+
+.input-group > input {
+  width: 90%;
+  box-shadow: none;
+  border: 1px solid #eaeaea;
+  padding-left: 120px;
+  font-size: 25px;
+}
+
+.input-group input:focus {
+  border: solid 2px gold;
+}
+
+.special, #password-requirement {
+  margin-bottom: 0px;
+}
+
+#password-requirement {
+  padding-left: 15px;
+  font-size: 15px;
+  text-align: left;
+}
+
+#return {
+  color: gold;
+  text-decoration: underline;
+}
+
+#return:hover {
+  transform: scale(1.2);
+}
+
+#go-back {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60%;
+}

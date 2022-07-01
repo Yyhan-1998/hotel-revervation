@@ -1,0 +1,24 @@
+/*
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the style sheet for the confirm.html. It uses the UW purple and gold theme.
+*/
+
+#confirm-page div p {
+  font-size: 20px;
+  color: gold;
+}
+
+#confirm-page p, #unable-page {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#confirmation-number {
+  color: black;
+}

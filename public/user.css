@@ -1,0 +1,95 @@
+/*
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the style sheet for shared section in user.html and select.html. User can get their
+  personal information and order information.
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  width: 23%;
+  height: fit-content;
+  border: 1px solid rgb(85, 24, 134);
+  border-radius: 5px;
+}
+
+aside > div {
+  text-align: start;
+  margin: 20px;
+}
+
+aside p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+#edit-user-info {
+  text-align: right;
+  font-size: 15px;
+}
+
+#edit-user-info:hover, #return {
+  text-decoration: underline;
+}
+
+#my-account {
+  width: 75%;
+}
+
+#my-account > h1 {
+  font-size: 40px;
+}
+
+#my-account > h2 {
+  font-size: 30px;
+  text-align: left;
+}
+
+#order {
+  width: 100%;
+}
+
+#return {
+  color: gold;
+}
+
+#return:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    width: 900px;
+    overflow: scroll;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    display: flex;
+  }
+
+  aside, #my-account {
+    width: 100%;
+  }
+}

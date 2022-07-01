@@ -1,0 +1,294 @@
+/*
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the style sheet for the selection.html. It uses the UW purple and gold theme.
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#your-stay, h1 {
+  margin-bottom: 0px;
+}
+
+#your-stay > div,
+#edit-stay,
+#search-results p,
+#reservation,
+.reservation-detail,
+#procedure-btn > button {
+  margin-top: 10px;
+}
+
+#your-stay > div,
+#procedure,
+#amenities ul,
+#filter > div,
+#expiration,
+#confirm-pay > div,
+.reservation-detail {
+  display: flex;
+}
+
+#your-stay > div {
+  justify-content: space-evenly;
+}
+
+#edit-stay-btn {
+  cursor: pointer;
+}
+
+#edit-stay-btn:hover, p.choose:hover {
+  transform: scale(1.1);
+}
+
+#start, #end {
+  width: 250px;
+}
+
+#procedure, #your-stay > div {
+  align-items: flex-start;
+}
+
+#procedure, .reservation-detail {
+  justify-content: space-between;
+}
+
+#procedure {
+  text-align: left;
+}
+
+/* select rooms */
+#procedure > div, #expiration > div {
+  margin-right: 20px;
+}
+
+#procedure > div {
+  width: 70%;
+}
+
+#procedure h1, #amenities ul, #reservation h3, #reservation p {
+  margin-top: 0px;
+}
+
+#procedure h1,
+#filter > div,
+#check-out > form > div,
+#reservation h2,
+button.close {
+  margin-bottom: 20px;
+}
+
+#procedure h1, .selected, .infoIcon {
+  font-size: 40px;
+}
+
+#procedure-btn > button, #reservation h2 {
+  font-size: 25px;
+}
+
+#procedure-btn > button {
+  margin-right: 50px;
+  background-color: white;
+  border-color: rgb(85, 24, 134);
+  border-radius: 10px;
+  width: fit-content;
+}
+
+h2, .room-card > button, #search-results p {
+  margin-bottom: 10px;
+}
+
+#amenities ul, #confirm-pay > div {
+  flex-wrap: wrap;
+}
+
+#amenities ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#amenities ul > li, #reservation hr, .reservation-detail > p {
+  margin-right: 10px;
+}
+
+#amenities ul > li, .input-group > input, .reservation-detail > div > p {
+  font-size: 15px;
+}
+
+#filter p, #filter label, #filter input {
+  margin: 0px;
+}
+
+#search-rooms, #hotel {
+  text-align: center;
+}
+
+#search-rooms {
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-column-gap: 5%;
+  grid-row-gap: 40px;
+}
+
+.room-card, .input-group, .input-group > input {
+  position: relative;
+}
+
+.room-card, #search-results img {
+  height: auto;
+}
+
+.room-card, #hotel, #reservation {
+  border-radius: 5px;
+}
+
+.room-card {
+  border: 2px solid rgb(85, 24, 134);
+  max-width: 400px;
+}
+
+.selected, .infoIcon, .input-group > label {
+  position: absolute;
+}
+
+.selected, .infoIcon {
+  top: 0%;
+}
+
+.selected {
+  right: 5%;
+  color: lightblue;
+}
+
+.infoIcon {
+  left: 5%;
+}
+
+.infoIcon:hover {
+  color: #fcc307;
+}
+
+#search-results img {
+  width: 100%;
+}
+
+/* check out */
+
+.input-group > label {
+  left: 0;
+  top: 25%;
+  margin-left: 5px;
+}
+
+.input-group > input {
+  width: 60%;
+  box-shadow: none;
+  border: 1px solid #eaeaea;
+  padding-left: 150px;
+}
+
+#expiration label, #expiration select {
+  height: 30px;
+}
+
+#expiration select {
+  width: min-content;
+}
+
+/* aside */
+#hotel, #reservation {
+  border: 1px solid rgb(85, 24, 134);
+}
+
+#hotel img {
+  width: 260px;
+  height: 200px;
+}
+
+/* confirm and pay */
+
+#confirm-pay > div > div {
+  margin-right: 15%;
+}
+
+/* reservation info */
+
+#reservation hr,
+#reservation h2,
+.reservation-detail > div,
+.reservation-detail > h3,
+#filter > div > div {
+  margin-left: 10px;
+}
+
+#reservation h3 {
+  font-size: 20px;
+}
+
+#change-room:hover, p.choose:hover, #your-stay p {
+  text-decoration: underline;
+}
+
+.highlight {
+  border: groove #fcc307;
+}
+
+#room-info button {
+  margin-top: 20px;
+}
+
+button.close {
+  width: max-content;
+}
+
+@media only screen and (max-width: 1000px) {
+  #your-stay {
+    text-align: left;
+  }
+
+  #your-stay > div {
+    flex-direction: column;
+  }
+
+  #your-stay p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  #search-rooms {
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #procedure {
+    flex-direction: column;
+  }
+
+  #procedure > div, #procedure > aside {
+    width: 100%;
+  }
+
+  #procedure > div, aside {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #search-rooms {
+    display: block;
+  }
+
+  .room-card {
+    width: 100%;
+  }
+}

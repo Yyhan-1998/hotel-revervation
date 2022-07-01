@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--
+  Last Updated On: December 11, 2021
+  Name: Travis Xie
+  Section: AE, TA: Tim Mandzyuk,Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the selection HTML page for the FP. In this page, user can select the room, book
+  a room and check out.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+    <link href="selection.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="selection.js"></script>
+    <script src="share.js"></script>
+    <title>Husky Hotel</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+  </head>
+  <body>
+    <nav>
+      <p id="hotel-logo"><a href="index.html">Husky Hotel</a></p>
+      <p id="sign-in">
+        <span id="log-in">Log In</span>
+        <span>|</span>
+        <a href="join-in.html" target="_blank">Join Us</a>
+      </p>
+      <p id="after-login" class="hidden">
+        <a href="user.html" target="_blank"><span id="user"></span>&rsquo;s Profile</a>
+        <span>|</span>
+        <span id="log-out">Log Out</span>
+      </p>
+    </nav>
+
+    <hr>
+
+    <section id="your-stay">
+      <h1>Your Stay</h1>
+      <div>
+        <p><span id="city"></span> Husky</p>
+        <p id="stay-date"></p>
+        <p id="room-guest"></p>
+        <p id="edit-stay-btn">Edit</p>
+      </div>
+    </section>
+
+    <section class="hidden">
+      <hr>
+      <form id="edit-stay">
+        <div id="input-destination" class="input-group">
+          <input type="text" id="destination" name="destination"
+          placeholder="going to" required>
+          <label for="destination">Destination</label>
+        </div>
+        <div id="input-date">
+          <div class="input-group">
+            <input type="date" id="start" name="start" placeholder="check in" required>
+            <label for="start">Check in</label>
+          </div>
+          <div class="input-group">
+            <input type="date" id="end" name="end" required>
+            <label for="end">Check out</label>
+          </div>
+          <div class="input-group">
+            <select id="number-of-guest" name="number-of-guest" required>
+              <option selected>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <label for="number-of-guest" id="guest-img">
+              <img src="image/guest.png" alt="guest">
+            </label>
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="disabled-btn" disabled>Update</button>
+        </div>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="procedure">
+      <div>
+        <h1 class="search-results">Select a Room</h1>
+        <h1 class="check-out hidden">Check Out</h1>
+        <h1 class="confirm-pay hidden">Confirm & Pay</h1>
+        <div id="procedure-btn">
+          <button type="button" class="search-results">Select a Room</button>
+          <button type="button" class="check-out disabled-btn" disabled>Check Out</button>
+          <button type="button" class="confirm-pay disabled-btn" disabled>Confirm & Pay</button>
+        </div>
+        <div id="amenities">
+          <h2>Your stay includes</h2>
+          <ul>
+            <li>✅Free Wifi</li>
+            <li>✅Non-smoking rooms</li>
+            <li>✅On-site restaurant</li>
+            <li>✅Indoor pool</li>
+            <li>✅Fitness center</li>
+          </ul>
+        </div>
+        <div id="filter">
+          <div>
+            <p>Filter: </p>
+            <div>
+              <label for="1-bed">1 Bed</label>
+              <input type="checkbox" id="1-bed" name="1 bed" value="1">
+            </div>
+            <div>
+              <label for="2-beds">2 Beds</label>
+              <input type="checkbox" id="2-beds" name="2 bed" value="2">
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <select name="price" id="price">
+                <option value="100000000" selected>Any Price</option>
+                <option value="100>">Less than 100</option>
+                <option value="200">Less than 200</option>
+                <option value="300">Less than 300</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div id="search-results">
+          <p></p>
+          <div id="search-rooms"></div>
+        </div>
+        <div id="check-out" class="hidden">
+          <h2 id="check-user">Please log in first before proceeding to the checkout</h2>
+          <form id="checkout-info" class="hidden">
+            <h2>Contact</h2>
+            <div class="input-group">
+              <input id="book-name" type="text" name="book-name"
+              placeholder="First name and last name" required>
+              <label for="book-name">Contact name</label>
+            </div>
+            <div class="input-group">
+              <input id="email" type="email" name="email" required>
+              <label for="email">Email</label>
+            </div>
+            <h2>Credit/Debit card information</h2>
+            <div class="input-group">
+              <input id="card-name" type="text" name="card-name" required>
+              <label for="card-name">Name on Card</label>
+            </div>
+            <div class="input-group">
+              <input id="card-number" type="text" name="card-number" required>
+              <label for="card-number">Card number</label>
+            </div>
+            <div id="expiration">
+              <div>
+                <label for="month">Expiration month</label>
+                <select id="month" name="month" required>
+                  <option value selected>Month</option>
+                  <option value="01" selected>01-Jan</option>
+                  <option value="02">02-Feb</option>
+                  <option value="03">03-Mar</option>
+                  <option value="04">04-Apr</option>
+                  <option value="05">05-May</option>
+                  <option value="06">06-Jun</option>
+                  <option value="07">07-Jul</option>
+                  <option value="08">08-Aug</option>
+                  <option value="09">09-Sep</option>
+                  <option value="10">10-Oct</option>
+                  <option value="11">11-Nov</option>
+                  <option value="12">12-Dec</option>
+                </select>
+              </div>
+              <div>
+                <label for="year">Expiration year</label>
+                <select id="year" name="year" required>
+                  <option value selected>Year</option>
+                  <option value="21" selected>21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <input id="security" type="text" name="security" required>
+              <label for="security">Security code</label>
+            </div>
+            <div class="input-group">
+              <input id="zipcode" type="text" name="code" required>
+              <label for="zipcode">Zip code</label>
+            </div>
+            <div>
+              <p id="payment-fault" class="alert hidden"></p>
+              <button id="complete-booking">Complete Booking</button>
+            </div>
+          </form>
+        </div>
+        <div id="confirm-pay" class="hidden">
+          <h2>Your order</h2>
+          <p><span></span> Husky</p>
+          <p>Room: <span></span></p>
+          <p>Date: <span></span></p>
+          <p>Guest: <span></span></p>
+          <p>Total: <span></span></p>
+          <div>
+            <div>
+              <h2>Contact</h2>
+              <p>Name: <span></span></p>
+              <p>Email: <span></span></p>
+            </div>
+            <div>
+              <h2>Credit/Debit card</h2>
+              <p>Name on Card: <span></span></p>
+              <p>Card number: <span></span></p>
+              <p>Exp Date: <span></span></p>
+              <p>Zip code: <span></span></p>
+            </div>
+          </div>
+          <p class="alert"></p>
+          <button type="button" id="pay">Confirm & Pay</button>
+        </div>
+      </div>
+      <aside>
+        <div id="hotel">
+          <p class="alert hidden"></p>
+          <img>
+          <div>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <div id="reservation">
+          <!-- collapsable-->
+          <h2>Reservation Summary</h2>
+          <div class="reservation-detail">
+            <div>
+              <h3>Room</h3>
+              <p></p>
+              <p id="room"></p>
+              <p></p>
+            </div>
+            <p></p>
+          </div>
+          <hr>
+          <div class="reservation-detail">
+            <h3>Total for stay</h3>
+            <p id="total-price"></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+
+    <!-- Log in modal -->
+    <section id="log-in-modal" class="modal hidden">
+      <div class="modal-content">
+        <p class="close">&times;</p>
+        <div>
+          <div id="log-in-form">
+            <h1>Log In</h1>
+            <p class="alert hidden"></p>
+            <form>
+              <div>
+                <label for="username" autocomplete="on">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+              </div>
+              <div>
+                <label for="password" autocomplete="on">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password"
+                minlength="8" maxlength="32" required>
+              </div>
+              <div id="submit">
+                <button type="submit">Log In</button>
+              </div>
+            </form>
+          </div>
+          <div id="not-a-member">
+              <h1>Not a Husky member?</h1>
+              <button>Join Us Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- room info modal -->
+    <section id="room-info" class="modal hidden">
+      <div class="modal-content">
+        <p class="close">&times;</p>
+        <h2></h2>
+        <div>
+          <img>
+          <div id="description">
+            <p></p>
+            <hr>
+            <p></p>
+            <ul></ul>
+          </div>
+        </div>
+        <button type="button" class="close">Select Room <span></span></button>
+      </div>
+    </section>
+
+    <hr>
+
+    <footer>
+      <div>
+        <p id="policy">Hotel Policy</p>
+      </div>
+      <div id="img">
+        <img src="image/parking.png" alt="car">
+        <img src="image/pets.png" alt="dog">
+        <img src="image/somking.png" alt="no smoking">
+        <img src="image/WiFi.png" alt="WiFi">
+      </div>
+      <div id="container">
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon-Thurs: 9:00am - 9:00pm</p>
+          <p>Fri-Sat: 9:00am - 11:00pm</p>
+          <p>Sunday: 9:00am - 1:00am</p>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p></p>
+          <p>Phone: (206)7789065</p>
+          <p>Email: huskyHotel@uw.edu</p>
+          <p>Address: University of Washington</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+  Last Updated On: December 11, 2021
+  Name: Travis Xie
+  Section: AE, TA: Tim Mandzyuk,Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the user HTML page for the FP. In this page, user can get their personal information and
+  order information.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+    <link href="user.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="user.js"></script>
+    <title>User Profile</title>
+  </head>
+
+  <body>
+    <nav>
+      <p id="hotel-logo"><a href="index.html">Husky Hotel</a></p>
+      <p>
+        <a href="user.html"><span id="user"></span>&rsquo;s Profile</a>
+        <span>|</span>
+        <span id="log-out">Log Out</span>
+      </p>
+    </nav>
+
+    <hr>
+
+    <main>
+      <aside id="user-information">
+        <div>
+          <p class="title">Name</p>
+          <p class="editable">Travis Xie</p>
+        </div>
+        <div>
+          <p class="title">Email</p>
+          <p class="editable">yinuox@uw.edu</p>
+        </div>
+        <div>
+          <p class="title">Phone Number</p>
+          <p class="editable">206-900-2387</p>
+        </div>
+        <div>
+          <p class="title">Address</p>
+          <p class="editable">Seattle</p>
+        </div>
+        <div class="hidden">
+          <p class="title">Address2</p>
+          <p class="editable">UW</p>
+        </div>
+        <div>
+          <p class="title">Zip Code</p>
+          <p class="editable">98105</p>
+        </div>
+      </aside>
+
+      <section id="my-account">
+        <h1>My Account</h1>
+        <h2 id="history-order">History Order</h2>
+        <div id="alert">
+          <p></p>
+        </div>
+        <section>
+          <table id="order">
+            <tbody>
+              <tr>
+                <th>ORDER DATE</th>
+                <th>ORDER NUMBER</th>
+                <th>CITY</th>
+                <th>CHECK IN</th>
+                <th>CHECK OUT</th>
+                <th>TOTAL PAID</th>
+                <th>STATUS</th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+    </main>
+
+    <!-- log out view -->
+    <section class="hidden">
+      <h1>Logged out successfully.</h1>
+      <p>
+        Close in <span id="countdown"></span> seconds. Or
+        <span id="return">close</span>now.
+      </p>
+    </section>
+
+    <hr>
+
+    <footer>
+      <div>
+        <p id="policy">Hotel Policy</p>
+      </div>
+      <div id="img">
+        <img src="image/parking.png" alt="car">
+        <img src="image/pets.png" alt="dog">
+        <img src="image/somking.png" alt="no smoking">
+        <img src="image/WiFi.png" alt="WiFi">
+      </div>
+      <div id="container">
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon-Thurs: 9:00am - 9:00pm</p>
+          <p>Fri-Sat: 9:00am - 11:00pm</p>
+          <p>Sunday: 9:00am - 1:00am</p>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p></p>
+          <p>Phone: (206)7789065</p>
+          <p>Email: huskyHotel@uw.edu</p>
+          <p>Address: University of Washington</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

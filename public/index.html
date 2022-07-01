@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+  Last Updated On: December 11, 2021
+  Name: Travis Xie
+  Section: AE, TA: Tim Mandzyuk,Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the main HTML page for the FP. Our group tries to design a hotel reservation
+  website service in which the user can reserve a hotel across different cities. The hotel
+  rooms' information used in the website are from <website>.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="share.js"></script>
+    <title>Husky Hotel</title>
+    <!-- The favicon is obtained from the UW official website -->
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+  </head>
+  <body>
+    <nav>
+      <p id="hotel-logo"><a href="index.html">Husky Hotel</a></p>
+      <p id="sign-in">
+        <span id="log-in">Log In</span>
+        <span>|</span>
+        <a href="join-in.html" target="_blank">Join Us</a>
+      </p>
+      <p id="after-login" class="hidden">
+        <a href="user.html" target="_blank"><span id="user"></span>&rsquo;s Profile</a>
+        <span>|</span>
+        <span id="log-out">Log Out</span>
+      </p>
+    </nav>
+
+    <hr>
+
+    <section>
+      <form id="edit-stay">
+        <div id="input-destination" class="input-group">
+          <input type="text" id="destination" name="destination"
+          placeholder="going to" required>
+          <label for="destination">Destination</label>
+        </div>
+        <div id="input-date">
+          <div class="input-group">
+            <input type="date" id="start" name="start" placeholder="check in" required>
+            <label for="start">Check in</label>
+          </div>
+          <div class="input-group">
+            <input type="date" id="end" name="end" required>
+            <label for="end">Check out</label>
+          </div>
+          <div class="input-group">
+            <select id="number-of-guest" name="number-of-guest" required>
+              <option selected>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <label for="number-of-guest" id="guest-img">
+              <img src="image/guest.png" alt="guest">
+            </label>
+          </div>
+        </div>
+        <p class="alert hidden"></p>
+        <div>
+          <button id="search" type="submit" class="disabled-btn" disabled>Check Room & Rates</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="hotel-info">
+      <div>
+        <img src="image/hotel1.jpeg" alt="Hotel front door" class="fade">
+        <img src="image/hotel2.jpeg" alt="Hotel picture" class="hidden fade">
+      </div>
+      <a id="prev">&#10094;</a>
+      <a id="next">&#10095;</a>
+    </section>
+
+    <hr>
+
+    <section id="modify-layout">
+      <button>list/grid</button>
+    </section>
+
+    <section id="room-types" class="list">
+      <p class="alert hidden"></p>
+    </section>
+
+    <!-- Log in page -->
+    <section id="log-in-modal" class="modal hidden">
+      <div class="modal-content">
+        <p class="close">&times;</p>
+        <div>
+          <div id="log-in-form">
+            <h1>Log In</h1>
+            <p class="alert hidden"></p>
+            <form>
+              <div>
+                <label for="username" autocomplete="on">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+              </div>
+              <div>
+                <label for="password" autocomplete="on">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password"
+                minlength="8" maxlength="32" required>
+              </div>
+              <div id="submit">
+                <button type="submit">Log In</button>
+              </div>
+            </form>
+          </div>
+          <div id="not-a-member">
+              <h1>Not a Husky member?</h1>
+              <button>Join Us Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="room-info" class="modal hidden">
+      <div class="modal-content">
+        <p class="close">&times;</p>
+        <h2></h2>
+        <div>
+          <img>
+          <div id="description">
+            <p></p>
+            <hr>
+            <p>Room highlights</p>
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <footer>
+      <div>
+        <p id="policy">Hotel Policy</p>
+      </div>
+      <div id="img">
+        <img src="image/parking.png" alt="car">
+        <img src="image/pets.png" alt="dog">
+        <img src="image/somking.png" alt="no smoking">
+        <img src="image/WiFi.png" alt="WiFi">
+      </div>
+      <div id="container">
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon-Thurs: 9:00am - 9:00pm</p>
+          <p>Fri-Sat: 9:00am - 11:00pm</p>
+          <p>Sunday: 9:00am - 1:00am</p>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p></p>
+          <p>Phone: (206)7789065</p>
+          <p>Email: huskyHotel@uw.edu</p>
+          <p>Address: University of Washington</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

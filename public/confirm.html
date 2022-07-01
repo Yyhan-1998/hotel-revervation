@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the order confirmation html page. It will give an order confirmation
+  number if the user has successfully placed an order, or it will give an error
+  message explaining why the order is not placed.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="confirm.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="confirm.js"></script>
+    <title>Order Confirmation</title>
+    <!-- The favicon is obtained from the UW official website -->
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+  </head>
+  <body>
+    <div id="confirm-page">
+      <p>Thank you for choosing Husky Hotel.</p>
+      <p> Your confirmation number is:</p>
+      <p id="confirmation-number"></p>
+      <p>Hope you enjoy your trip! We look forward to welcoming you soon.</p>
+    </div>
+
+    <div id="unable-page" class="hidden">
+      <p>
+        Sorry, we were unable to proceed your order, because you have placed
+        another order at the same time period.
+      </p>
+      <p>Please change stay in date and try again.</p>
+    </div>
+
+    <div>
+      <p>Click to Close the page.</p>
+      <button id="go-main-page">Close</button>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,110 @@
+/*
+  Last Updated Date: December 11, 2021
+  Student 1: Travis Xie
+  Section: AE, TA: Tim Mandzyuk, Nikola Bojanic
+
+  Student 2: Yanyao Han
+  Section AA: TA: Sonia Saitawdekar
+
+  This is the style sheet for the search function. It uses the UW purple and gold theme.
+*/
+#edit-stay > div {
+  margin-top: 20px;
+}
+
+/* each div display styles */
+#edit-stay > div:nth-child(1) {
+  text-align: left;
+}
+
+#input-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* input style (put label inside the input) */
+.input-group, .input-group > input {
+  position: relative;
+}
+
+.input-group > label, .input-group > input {
+  height: 40px;
+}
+
+.input-group > input, .input-group > select {
+  border-radius: 5px;
+}
+
+.input-group > label {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  margin-left: 5px;
+}
+
+/* input and select styles */
+#destination {
+  width: 235px;
+}
+
+#start, #end, #destination {
+  padding-left: 120px;
+}
+
+#start, #end, #destination, #number-of-guest {
+  height: 35px;
+  font-size: 25px;
+  box-shadow: none;
+  border: 1px solid #eaeaea;
+}
+
+/* select styles */
+#guest-img {
+  top: 5%;
+}
+
+#number-of-guest {
+  width: 100px;
+  padding-left: 50px;
+}
+
+#edit-stay img {
+  width: 30px;
+  height: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+  #destination, #start, #end {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1000px), (min-width: 1400px) {
+  #edit-stay {
+    display: flex;
+  }
+
+  #edit-stay, #input-date {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #edit-stay > div {
+    margin-top: 0px;
+  }
+
+  #input-date div, #edit-stay button {
+    margin-top: 15px;
+  }
+
+  #destination, #start, #end {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #destination, #start, #end {
+    width: 220px;
+  }
+}
